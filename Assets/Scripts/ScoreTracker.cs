@@ -10,6 +10,7 @@ public class ScoreTracker : MonoBehaviour
     public int totalScore;
 
     private void Update()
+        // vissar och trackar dinna poäng
     {
         scoreText.text = string.Format("Score: {0}", totalScore);
     }

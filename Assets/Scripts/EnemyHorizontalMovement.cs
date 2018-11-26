@@ -26,7 +26,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
 
 
     }
-
+    // att man vänder när man går in i "InvisibleWall"
     void Move(bool flip = true)
     {
         isLeft = !isLeft;

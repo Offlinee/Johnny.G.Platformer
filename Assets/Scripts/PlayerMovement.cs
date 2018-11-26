@@ -15,16 +15,17 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // gör att rbody blir ditt egna Rigidbody
         rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-            
-      rbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), rbody.velocity.y);
 
-    if (Input.GetKeyDown(KeyCode.W) && groundCheck.touches > 0)
+        rbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), rbody.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.W) && groundCheck.touches > 0)
         {
             rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
         }
@@ -33,6 +34,5 @@ public class PlayerMovement : MonoBehaviour
             rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
         }
     }
-    
-        
+
 }
