@@ -22,13 +22,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // unitys inbyggda movement script
         rbody.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), rbody.velocity.y);
-
+        // om man trycker på w och groundchek rör en collider så hoppar man
         if (Input.GetKeyDown(KeyCode.W) && groundCheck.touches > 0)
         {
             rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
         }
+        // om man trycker på space och groundcjek rör en collider så hoppar man
         if (Input.GetKeyDown(KeyCode.Space) && groundCheck.touches > 0)
         {
             rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);

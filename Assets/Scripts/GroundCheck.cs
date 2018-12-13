@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour
 {
     public int touches;
-
+    // kollar ifall man nudar marken
     private void OnTriggerEnter2D(Collider2D collision)
     {
         touches++;
