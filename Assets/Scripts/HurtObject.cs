@@ -9,6 +9,7 @@ public class HurtObject : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
+            // 
         {
             Scene active = SceneManager.GetActiveScene();
             SceneManager.LoadScene(active.name);
